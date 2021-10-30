@@ -1,0 +1,24 @@
+{
+  "name": "clement",
+  "version": "1.0.0",
+  "description": "Unofficial TikTok API",
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint ./src/**/*.ts --fix",
+    "build": "yarn lint && tsc",
+    "start": "ts-node ./src/index.ts",
+    "dev": "nodemon ./src/index.ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "nodemon": "^2.0.14",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "repository": "git@github.com:lionneclement/Tiktok-Api.git",
+  "author": "clement <lionneclement@gmail.com>",
+  "license": "MIT"
+}
