@@ -6,7 +6,10 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint ./src/**/*.ts --fix",
-    "build": "yarn lint && tsc"
+    "build": "yarn lint && tsc",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable"
   },
   "dependencies": {
     "axios": "^0.24.0"
@@ -19,12 +22,15 @@
     "@typescript-eslint/parser": "^5.2.0",
     "babel-jest": "^27.3.1",
     "eslint": "^8.1.0",
+    "husky": "^7.0.4",
     "jest": "^27.3.1",
+    "pinst": "^2.1.6",
     "prettier": "^2.4.1",
     "ts-node": "^10.4.0",
     "typescript": "^4.4.4"
   },
   "repository": "git@github.com:lionneclement/Tiktok-Api.git",
   "author": "clement <lionneclement@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "private": false
 }
