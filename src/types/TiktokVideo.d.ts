@@ -1,8 +1,9 @@
-// Generate by https://jvilk.com/MakeTypes/
+// Generate by https://jStickersOnItemEntityilk.com/MakeTypes/
 
-export interface Tiktok {
+export interface TiktokVideo {
   statusCode: number;
   itemList?: ItemListEntity[] | null;
+  cursor?: string;
   hasMore: boolean;
 }
 export interface ItemListEntity {
@@ -33,6 +34,8 @@ export interface ItemListEntity {
   isAd: boolean;
   duetDisplay: number;
   stitchDisplay: number;
+  stickersOnItem?: StickersOnItemEntity[] | null;
+  effectStickers?: EffectStickersEntity[] | null;
 }
 export interface Video {
   id: string;
@@ -127,4 +130,13 @@ export interface AuthorStats {
   videoCount: number;
   diggCount: number;
   heart: number;
+}
+
+export interface StickersOnItemEntity {
+  stickerType: number;
+  stickerText?: string[] | null;
+}
+export interface EffectStickersEntity {
+  name: string;
+  ID: string;
 }
